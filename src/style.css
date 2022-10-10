@@ -10,8 +10,24 @@ body{
 }
 
 h1{
-    font-size: 40px;
+    font-size: 60px;
 }
+
+.src{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    margin-bottom: 4rem;
+}
+
+.src input{
+    height: 30px;
+    width: 20rem;
+    font-size: 20px;
+}
+
+
 
 .mainContent{   
     display: flex;
@@ -20,8 +36,8 @@ h1{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 35rem;
-    height: 30rem;
+    width: 40rem;
+    height: 40rem;
     background-color: #2A0944;
     flex-direction: column;
     color: white;
@@ -36,7 +52,7 @@ h1{
 }
 
 .content label{
-    font-size: 18px;
+    font-size: 25px;
 }
 
 .content input{
