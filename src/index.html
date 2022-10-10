@@ -12,32 +12,30 @@
 </head>
 <body>
     
+    <form onsubmit="getUsers()">
+        <div class="mainContent">
+            <main>
+                <div class="content">
+                    <div class="src">
+                        <h1>Github Src</h1>
+                        <input type="text" id="nome" placeholder="Insira o nome do usuário">   
+                    </div>
+                        <div class="result">
+                            <label for="nome">Nome:</label>
+                            <span id="userName"></span>
+
+                            <label for="repos">Qnt de Repositórios:</label>
+                            <span id="repos"></span>   
+
+                            <label for="followers">followers:</label>
+                            <span id="followers"></span>
+                        </div>                   
+                </div> 
+            </main>
+        </div>
+    </form>    
     
-    <div class="mainContent">
-
-        
-        <main>
-            <div class="content">
-                <div class="src">
-                    <h1>Github Src</h1>
-                    <input type="text" id="nome" placeholder="Insira o nome do usuário">   
-                </div>
-
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome">  
-
-                <label for="repos">Qnt de Repositórios:</label>
-                <input type="text" id="repos">   
-
-                <label for="followers">followers:</label>
-                <input type="text" id="followers">                     
-            </div>
-
-            
-        </main>
-    </div>
-    
-        
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
