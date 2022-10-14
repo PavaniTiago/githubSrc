@@ -1,18 +1,40 @@
+const mainInput = document.getElementById('nome');
+const userName = document.getElementById('userName');
+const userRepos = document.getElementById('repos');
+const userFollowers =  document.getElementById('followers');
 
-const url = 'https://api.github.com/users/PavaniTiago';
+const form = document.querySelector('.form')
 
-async function getUsers(){
-    await fetch(url)
-    .then(res =>{
-        return res.json()
-    }) 
-    .then(response => {
-        document.getElementById('userName').innerHTML = response.login
-        document.getElementById('repos').innerHTML = response.public_repos
-        document.getElementById('followers').innerHTML = response.followers
 
-    })
-    .catch(e => console.log(e))
+async function getUsers(user){
+    const APIResponse = await fetch(`https://api.github.com/users/${user}`);
+
+  if (APIResponse.status === 200) {
+    const data = await APIResponse.json();
+    return data;
+  }
 }
 
-getUsers()
+const renderContent = async(user) =>{
+    userName.innerHTML = ''
+    const data = await getUsers(user)
+
+    if(data){
+        userName.innerHTML = data.login
+        userRepos.innerHTML = data.public_repos
+        userFollowers.innerHTML = data.followers
+        mainInput.value = ''
+    }else{
+        userName.innerHTML = 'Not found :('
+        userRepos.innerHTML = ''
+        userFollowers.innerHTML = ''
+    }
+
+    form.addEventListener('submit', (event) =>{
+        event.preventDefault();
+        renderContent(mainInput.value)
+    })
+}
+
+renderContent()
+
