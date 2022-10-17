@@ -16,7 +16,6 @@ async function getUsers(user){
 }
 
 const renderContent = async(user) =>{
-    userName.innerHTML = ''
     const data = await getUsers(user)
 
     if(data){
@@ -25,7 +24,7 @@ const renderContent = async(user) =>{
         userFollowers.innerHTML = data.followers
         mainInput.value = ''
     }else{
-        userName.innerHTML = 'Not found :('
+        userName.innerHTML = ''
         userRepos.innerHTML = ''
         userFollowers.innerHTML = ''
     }
@@ -36,5 +35,5 @@ const renderContent = async(user) =>{
     })
 }
 
-renderContent()
+renderContent(getUsers)
 

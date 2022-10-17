@@ -20,6 +20,7 @@ h1{
     align-items: center;
     font-size: 30px;
     margin-bottom: 3rem;
+    
 }
 
 .src input{
@@ -74,5 +75,5 @@ h1{
 .result span{
     width: auto;
     background-color: white;
-    color: black;
+    color: #212124;
 }
