@@ -14,3 +14,7 @@
 <br>
 
 ## No input de texto você irá colocar o nome do usuário que deseja buscar os dados e irá aparecer os dados em seguida.
+<br>
+<hr>
+
+## link do projeto: https://pavanitiago.github.io/githubSrc/
